@@ -13,32 +13,22 @@ class ArticleController extends Controller
     {
         $category = ($request->category) ?: "article";
         $perPage = ($request->per_page) ?: 5;
-        $articles = Article::with('comments')->where('category', $category)->paginate($perPage);
+        /** TODO :: Add logic here to get all articles */
+        
         return $this->sendResponse($articles, 'Article Data');
     }
 
     public function store(ArticleRequest $request)
     {
-        $article = Article::create([
-            'title' => $request->title,
-            'user_id' => $request->user_id,
-            'content' => $request->content,
-            'category' => $request->category,
-            'article_creation_datetime' => now(),
-            'article_update_datetime' => now()
-        ]);
+        /** TODO :: Add logic here to create article data */
         return $this->sendResponse($article, 'Article Created', Response::HTTP_CREATED);
     }
 
     public function update(ArticleRequest $request, Article $article)
     {
-        $article->update([
-            'title' => $request->title,
-            'user_id' => $request->user_id,
-            'content' => $request->content,
-            'category' => $request->category,
-            'article_update_datetime' => now()
-        ]);
+        /** TODO :: Add logic here to update article data */
         return $this->sendResponse($article, 'Article Updated');
     }
+
+    /** TODO :: create one more api for article delete. */
 }

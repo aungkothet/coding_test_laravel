@@ -29,8 +29,12 @@ class RegisterController extends Controller
 
     public function generateSalt($firstName, $lastName)
     {
-        $firstChar = Str::substr($firstName, 0, 1);
-        $secondChar = Str::substr($lastName, 0, 1);
-        return Str::upper($firstChar . $secondChar . now()->format('ymdis'));
+        /** TODO :: Add logic here. 
+         * Salt format is {firstCharater of firstName}{firstCharacter of lastName}{YY}{MM}{DD}{minutes}{seconds}
+         * EG :: FirstName = Andrew, LastName = Ko, Current time is 2023-Jul-29 13:20:53  
+         * Salt ==> AK23072053
+         **/
+
+         return "";
     }
 }

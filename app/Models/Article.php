@@ -11,12 +11,6 @@ class Article extends Model
     use HasFactory;
     use Commentable;
 
-    protected $primaryKey = 'article_id';
-
-    protected $table = 'MY_ARTICLE';
-
-    public $timestamps = false;
-
     protected $fillable = [
         'user_id',
         'title',

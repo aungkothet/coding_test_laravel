@@ -16,10 +16,6 @@ class User extends Authenticatable
 
     use Commenter;
     
-    protected $primaryKey = 'user_id';
-    protected $table = 'MY-USER';
-    public $timestamps = false;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -37,16 +33,6 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'login_password_hash',
-        'login_password_salt'
-    ];
-
-    /**
      * The attributes that should be cast.
      *
      * @var array<string, string>
@@ -56,10 +42,5 @@ class User extends Authenticatable
         'user_creation_datetime' => 'datetime',
         'login_password_hash' => 'hashed',
     ];
-
-    public function getAuthPassword()
-    {
-        return $this->login_password_hash;
-    }
 
 }

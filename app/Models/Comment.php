@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    protected $primaryKey = 'article_comment_id';
-
-    protected $table = "MY_ARTICLE_COMMENT";
 
     /**
      * The relations to eager load on every query.
@@ -16,8 +13,7 @@ class Comment extends Model
      * @var array
      */
     protected $with = [
-        'article_commenter',
-        'replies'
+        'article_commenter'
     ];
  
     /**

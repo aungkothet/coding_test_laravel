@@ -43,8 +43,9 @@ class LoginRequest extends FormRequest
         $this->ensureIsNotRateLimited();
         $credentials = $this->only('email', 'password');
         $user = User::where('email', $credentials['email'])->first();
-        $password = $credentials['password'] . $user->login_password_salt;
-        if (!Auth::attempt(['email' => $credentials['email'], 'password' => $password])) {
+        /** TODO :: Add logic here */
+        
+        if (!Auth::attempt()) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([

@@ -22,7 +22,7 @@ class ArticleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'max:50'],
+            'title' => ['required', 'string'],
             'user_id' => ['required', 'exists:MY-USER,user_id'],
             'content' => ['required'],
             'category' => ['required', 'in:article,event'],

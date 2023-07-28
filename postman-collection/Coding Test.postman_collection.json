@@ -1,0 +1,1259 @@
+{
+	"info": {
+		"_postman_id": "c464bb5f-dbf6-49ef-a462-b055150d9a68",
+		"name": "Coding Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26846210"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Aung",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Ko",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "kothet@gmail.io",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Aung",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Ko",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "kothet@gmail.io",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 15:25:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 15:25:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n        \"first_name\": \"Aung\",\n        \"last_name\": \"Ko\",\n        \"email\": \"kothet@gmail.io\",\n        \"user_id\": 1,\n        \"token\": \"1|yqfGkIbWawzpS2gNkhqlGqbL1PSn8dzP7y0LK7UG\"\n    },\n    \"message\": \"User register successfully.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "kothet@tmam.io",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "kothet@tmam.io",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 15:12:29 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 15:12:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"user_id\": 1,\n        \"first_name\": \"Aung\",\n        \"last_name\": \"Ko\",\n        \"email\": \"kothet@tmam.io\",\n        \"email_verified_datetime\": null,\n        \"user_creation_datetime\": \"2023-07-28T15:02:37.000000Z\",\n        \"user_acct_status\": \"Active\",\n        \"token\": \"6|rG7MpVtYlkRYnrhBKxvkAs6YEnlmXEY2pnofo7ow\"\n    },\n    \"message\": \"User Login successfully.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Article List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/articles?category=article&per_page=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "article",
+							"description": "enum={article,event}"
+						},
+						{
+							"key": "per_page",
+							"value": "10",
+							"description": "(optional)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Article List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/articles?category=article&per_page=10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "article",
+									"description": "enum={article,event}"
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"description": "(optional)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:24:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:24:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"article_id\": 1,\n                \"user_id\": 1,\n                \"title\": \"Update title 1\",\n                \"content\": \"Loream\",\n                \"category\": \"article\",\n                \"article_creation_datetime\": \"2023-07-28 15:28:46\",\n                \"article_update_datetime\": \"2023-07-28 15:34:18\",\n                \"article_delete_datetime\": null,\n                \"comments\": [\n                    {\n                        \"article_comment_id\": 3,\n                        \"article_commenter_id\": \"1\",\n                        \"article_commenter_type\": \"App\\\\Models\\\\User\",\n                        \"article_commentable_type\": \"App\\\\Models\\\\Article\",\n                        \"article_commentable_id\": \"1\",\n                        \"article_comment\": \"This is first Comment.\",\n                        \"article_comment_child_id\": null,\n                        \"created_at\": \"2023-07-28T16:20:45.000000Z\",\n                        \"updated_at\": \"2023-07-28T16:20:45.000000Z\",\n                        \"article_commenter\": {\n                            \"user_id\": 1,\n                            \"first_name\": \"Aung\",\n                            \"last_name\": \"Ko\",\n                            \"email\": \"kothet@gmail.io\",\n                            \"email_verified_datetime\": null,\n                            \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n                            \"user_acct_status\": \"Active\"\n                        },\n                        \"replies\": []\n                    },\n                    {\n                        \"article_comment_id\": 4,\n                        \"article_commenter_id\": \"1\",\n                        \"article_commenter_type\": \"App\\\\Models\\\\User\",\n                        \"article_commentable_type\": \"App\\\\Models\\\\Article\",\n                        \"article_commentable_id\": \"1\",\n                        \"article_comment\": \"This is second Comment.\",\n                        \"article_comment_child_id\": null,\n                        \"created_at\": \"2023-07-28T16:20:52.000000Z\",\n                        \"updated_at\": \"2023-07-28T16:20:52.000000Z\",\n                        \"article_commenter\": {\n                            \"user_id\": 1,\n                            \"first_name\": \"Aung\",\n                            \"last_name\": \"Ko\",\n                            \"email\": \"kothet@gmail.io\",\n                            \"email_verified_datetime\": null,\n                            \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n                            \"user_acct_status\": \"Active\"\n                        },\n                        \"replies\": [\n                            {\n                                \"article_comment_id\": 6,\n                                \"article_commenter_id\": \"1\",\n                                \"article_commenter_type\": \"App\\\\Models\\\\User\",\n                                \"article_commentable_type\": \"App\\\\Models\\\\Article\",\n                                \"article_commentable_id\": \"1\",\n                                \"article_comment\": \"This is reply Comment.\",\n                                \"article_comment_child_id\": 4,\n                                \"created_at\": \"2023-07-28T16:21:41.000000Z\",\n                                \"updated_at\": \"2023-07-28T16:21:41.000000Z\",\n                                \"article_commenter\": {\n                                    \"user_id\": 1,\n                                    \"first_name\": \"Aung\",\n                                    \"last_name\": \"Ko\",\n                                    \"email\": \"kothet@gmail.io\",\n                                    \"email_verified_datetime\": null,\n                                    \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n                                    \"user_acct_status\": \"Active\"\n                                },\n                                \"replies\": [\n                                    {\n                                        \"article_comment_id\": 7,\n                                        \"article_commenter_id\": \"1\",\n                                        \"article_commenter_type\": \"App\\\\Models\\\\User\",\n                                        \"article_commentable_type\": \"App\\\\Models\\\\Article\",\n                                        \"article_commentable_id\": \"1\",\n                                        \"article_comment\": \"This is reply of reply Comment.\",\n                                        \"article_comment_child_id\": 6,\n                                        \"created_at\": \"2023-07-28T16:22:02.000000Z\",\n                                        \"updated_at\": \"2023-07-28T16:22:02.000000Z\",\n                                        \"article_commenter\": {\n                                            \"user_id\": 1,\n                                            \"first_name\": \"Aung\",\n                                            \"last_name\": \"Ko\",\n                                            \"email\": \"kothet@gmail.io\",\n                                            \"email_verified_datetime\": null,\n                                            \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n                                            \"user_acct_status\": \"Active\"\n                                        },\n                                        \"replies\": []\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"article_comment_id\": 5,\n                        \"article_commenter_id\": \"1\",\n                        \"article_commenter_type\": \"App\\\\Models\\\\User\",\n                        \"article_commentable_type\": \"App\\\\Models\\\\Article\",\n                        \"article_commentable_id\": \"1\",\n                        \"article_comment\": \"This is third Comment.\",\n                        \"article_comment_child_id\": null,\n                        \"created_at\": \"2023-07-28T16:20:56.000000Z\",\n                        \"updated_at\": \"2023-07-28T16:20:56.000000Z\",\n                        \"article_commenter\": {\n                            \"user_id\": 1,\n                            \"first_name\": \"Aung\",\n                            \"last_name\": \"Ko\",\n                            \"email\": \"kothet@gmail.io\",\n                            \"email_verified_datetime\": null,\n                            \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n                            \"user_acct_status\": \"Active\"\n                        },\n                        \"replies\": []\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/articles?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/articles?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/articles?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://127.0.0.1:8000/api/articles\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"message\": \"Article Data\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Article Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Update title 1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Loream ",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "event",
+							"description": "enum={article,event}",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/articles/:articleid",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"articles",
+						":articleid"
+					],
+					"variable": [
+						{
+							"key": "articleid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Article Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "This is title test",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Loream ",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "article",
+									"description": "enum={article,event}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/articles",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 15:28:46 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 15:28:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"title\": \"This is title test\",\n        \"user_id\": \"1\",\n        \"content\": \"Loream\",\n        \"category\": \"article\",\n        \"article_creation_datetime\": \"2023-07-28T15:28:46.839528Z\",\n        \"article_update_datetime\": \"2023-07-28T15:28:46.839536Z\",\n        \"article_id\": 1\n    },\n    \"message\": \"Article Created\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Comment Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "article_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "This is third Comment. ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/comments",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"comments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Comment Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "article_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "This is second Comment. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:11:42 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:11:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"article_commenter_id\": 1,\n        \"article_commenter_type\": \"App\\\\Models\\\\User\",\n        \"article_commentable_id\": 1,\n        \"article_commentable_type\": \"App\\\\Models\\\\Article\",\n        \"article_comment\": \"This is second Comment.\",\n        \"updated_at\": \"2023-07-28T16:11:42.000000Z\",\n        \"created_at\": \"2023-07-28T16:11:42.000000Z\",\n        \"article_comment_id\": 5,\n        \"article_commenter\": {\n            \"user_id\": 1,\n            \"first_name\": \"Aung\",\n            \"last_name\": \"Ko\",\n            \"email\": \"kothet@gmail.io\",\n            \"email_verified_datetime\": null,\n            \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n            \"user_acct_status\": \"Active\"\n        },\n        \"article_commentable\": {\n            \"article_id\": 1,\n            \"user_id\": 1,\n            \"title\": \"Update title 1\",\n            \"content\": \"Loream\",\n            \"category\": \"event\",\n            \"article_creation_datetime\": \"2023-07-28 15:28:46\",\n            \"article_update_datetime\": \"2023-07-28 15:34:18\",\n            \"article_delete_datetime\": null\n        }\n    },\n    \"message\": \"Comment Saved\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Reply",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "message",
+							"value": "This is reply of reply Comment. ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/comments/:commentId",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"comments",
+						":commentId"
+					],
+					"variable": [
+						{
+							"key": "commentId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Comment Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "article_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "This is second Comment. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:11:42 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:11:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"article_commenter_id\": 1,\n        \"article_commenter_type\": \"App\\\\Models\\\\User\",\n        \"article_commentable_id\": 1,\n        \"article_commentable_type\": \"App\\\\Models\\\\Article\",\n        \"article_comment\": \"This is second Comment.\",\n        \"updated_at\": \"2023-07-28T16:11:42.000000Z\",\n        \"created_at\": \"2023-07-28T16:11:42.000000Z\",\n        \"article_comment_id\": 5,\n        \"article_commenter\": {\n            \"user_id\": 1,\n            \"first_name\": \"Aung\",\n            \"last_name\": \"Ko\",\n            \"email\": \"kothet@gmail.io\",\n            \"email_verified_datetime\": null,\n            \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n            \"user_acct_status\": \"Active\"\n        },\n        \"article_commentable\": {\n            \"article_id\": 1,\n            \"user_id\": 1,\n            \"title\": \"Update title 1\",\n            \"content\": \"Loream\",\n            \"category\": \"event\",\n            \"article_creation_datetime\": \"2023-07-28 15:28:46\",\n            \"article_update_datetime\": \"2023-07-28 15:34:18\",\n            \"article_delete_datetime\": null\n        }\n    },\n    \"message\": \"Comment Saved\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "message",
+							"value": "This is updated Comment. ",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/comments/:commentId",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"comments",
+						":commentId"
+					],
+					"variable": [
+						{
+							"key": "commentId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Comment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "This is updated Comment. ",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/:commentId",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								":commentId"
+							],
+							"variable": [
+								{
+									"key": "commentId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:15:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:15:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"article_comment_id\": 1,\n        \"article_commenter_id\": \"1\",\n        \"article_commenter_type\": \"App\\\\Models\\\\User\",\n        \"article_commentable_type\": \"App\\\\Models\\\\Article\",\n        \"article_commentable_id\": \"1\",\n        \"article_comment\": \"This is updated Comment.\",\n        \"article_comment_child_id\": null,\n        \"created_at\": \"2023-07-28T16:14:26.000000Z\",\n        \"updated_at\": \"2023-07-28T16:15:10.000000Z\",\n        \"article_commenter\": {\n            \"user_id\": 1,\n            \"first_name\": \"Aung\",\n            \"last_name\": \"Ko\",\n            \"email\": \"kothet@gmail.io\",\n            \"email_verified_datetime\": null,\n            \"user_creation_datetime\": \"2023-07-28T15:25:10.000000Z\",\n            \"user_acct_status\": \"Active\"\n        },\n        \"replies\": []\n    },\n    \"message\": \"Comment Updated\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Comment Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/comments/:commentId",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"comments",
+						":commentId"
+					],
+					"variable": [
+						{
+							"key": "commentId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Comment Delete",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "DELETE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/:commentId",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								":commentId"
+							],
+							"variable": [
+								{
+									"key": "commentId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:20:17 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 16:20:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [],\n    \"message\": \"Comment Deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Article Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "This is title test 2",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Loream ",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "event",
+							"description": "enum={article,event}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/articles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Article Update",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Update title 1",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Loream ",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "event",
+									"description": "enum={article,event}",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/articles/:articleid",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"articles",
+								":articleid"
+							],
+							"variable": [
+								{
+									"key": "articleid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 15:34:18 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jul 2023 15:34:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"article_id\": 1,\n        \"user_id\": \"1\",\n        \"title\": \"Update title 1\",\n        \"content\": \"Loream\",\n        \"category\": \"event\",\n        \"article_creation_datetime\": \"2023-07-28 15:28:46\",\n        \"article_update_datetime\": \"2023-07-28T15:34:18.414693Z\",\n        \"article_delete_datetime\": null\n    },\n    \"message\": \"Article Updated\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "1|yqfGkIbWawzpS2gNkhqlGqbL1PSn8dzP7y0LK7UG",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

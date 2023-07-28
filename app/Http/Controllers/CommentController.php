@@ -18,11 +18,9 @@ class CommentController extends Controller
      */
     public function store(StoreCommentRequest $request)
     {
-       
         $model = Article::findOrFail($request->article_id);
         $comment = new Comment();
-        $comment->article_commenter()->associate(Auth::user());
-        $comment->article_commentable()->associate($model);
+        /** TODO :: Add 2 lines here to save the article_commenter and article_commentable objects */
         $comment->article_comment = $request->message;
         $comment->save();
         return $this->sendResponse($comment, "Comment Saved", Response::HTTP_CREATED);
@@ -45,7 +43,7 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        $comment->forceDelete();
+        $comment->delete();
         return $this->sendResponse([], "Comment Deleted");
     }
 
@@ -54,7 +52,7 @@ class CommentController extends Controller
         $reply = new Comment();
         $reply->article_commenter()->associate(Auth::user());
         $reply->article_commentable()->associate($comment->article_commentable);
-        $reply->parent()->associate($comment);
+        /** TODO :: Add a line here to save the parent comment object */
         $reply->article_comment = $request->message;   
         $reply->save(); 
         return $this->sendResponse($reply, "Replied Saved", Response::HTTP_CREATED);

@@ -15,13 +15,9 @@ trait Commentable
      * delete leftover comments once the commentable
      * model is deleted.
      */
-    protected static function bootArticleCommentable()
+    protected static function bootCommentable()
     {
-        static::deleted(function($article_commentable) {
-            foreach ($article_commentable->comments as $comment) {
-                $comment->delete();
-            }
-        });
+        /** HINT :: need to add some magic */
     }
 
     /**
