@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('category', 20);
             $table->dateTime('article_creation_datetime');
             $table->dateTime('article_update_datetime')->nullable();
-            $table->dateTime('article_delete_datetime')->nullable();
+            $table->softDeletes('article_delete_datetime');
         });
     }
 

@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Trait\Commenter;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -12,15 +14,26 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    use Commenter;
+    
+    protected $primaryKey = 'user_id';
+    protected $table = 'MY-USER';
+    public $timestamps = false;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'login_password_hash',
+        'login_password_salt',
+        'first_name',
+        'last_name',
         'email',
-        'password',
+        'email_verified_datetime',
+        'user_creation_datetime',
+        'user_acct_status',
     ];
 
     /**
@@ -29,8 +42,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'login_password_hash',
+        'login_password_salt'
     ];
 
     /**
@@ -39,7 +52,14 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'email_verified_datetime' => 'datetime',
+        'user_creation_datetime' => 'datetime',
+        'login_password_hash' => 'hashed',
     ];
+
+    public function getAuthPassword()
+    {
+        return $this->login_password_hash;
+    }
+
 }
